@@ -1,0 +1,39 @@
+<!--
+
+- Solicitar que se ingrese el nombre y la clave de un usuario. Mostrar una ventana de alerta si en la clave se 
+ingresan menos de 7 caracteres o más de 20
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  function vaciar(control)
+  {
+    if (control.value.length<7){
+      alert('Debe tener mas de 7 caracteres')
+        }
+      else{
+          if(control.value.length>20){
+            alert('Debe tener menos de 20 caracteres') 
+          }
+      }
+  }
+</script>
+
+<form>
+    Ingrese su usuario:
+    <input type="text" id="usuario"><br>
+    Ingrese clave:
+    <input type="password" id="clave" onBlur="vaciar(this)"><br>
+    <input type="button" value="confirmar">
+  </form>
+  
+</body>
+</html>
+
